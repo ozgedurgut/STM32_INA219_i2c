@@ -30,6 +30,7 @@
 float ina219_currentDivider_mA;
 float ina219_powerMultiplier_mW;
 uint16_t ina219_calibrationValue;
+
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -95,10 +96,7 @@ int main(void)
 	MX_GPIO_Init();
 	MX_I2C3_Init();
 	/* USER CODE BEGIN 2 */
-	while(!INA219_Init(&ina219, &hi2c3, INA219_ADDRESS))
-	{
-
-	}
+	INA219_Init(&ina219, &hi2c3, INA219_ADDRESS);
 
 	/* USER CODE END 2 */
 

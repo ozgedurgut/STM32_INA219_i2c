@@ -60,8 +60,8 @@ all: main-build
 main-build: stm32g473_ina219.elf secondary-outputs
 
 # Tool invocations
-stm32g473_ina219.elf stm32g473_ina219.map: $(OBJS) $(USER_OBJS) C:\Users\KEODURGUT\STM32CubeIDE\workspace_1.11.0\stm32g473_ina219\STM32G473RCTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "stm32g473_ina219.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\KEODURGUT\STM32CubeIDE\workspace_1.11.0\stm32g473_ina219\STM32G473RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32g473_ina219.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+stm32g473_ina219.elf stm32g473_ina219.map: $(OBJS) $(USER_OBJS) C:\Users\KEODURGUT\Documents\GitHub\STM32_INA219_i2c\stm32g473_ina219\STM32G473RCTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "stm32g473_ina219.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\KEODURGUT\Documents\GitHub\STM32_INA219_i2c\stm32g473_ina219\STM32G473RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32g473_ina219.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
