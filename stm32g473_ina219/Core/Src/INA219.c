@@ -29,14 +29,14 @@ uint16_t INA219_ReadBusVoltage(INA219_t *ina219)
 
 int16_t INA219_ReadCurrent_raw(INA219_t *ina219)
 {
-	int16_t result = Read16(ina219, INA219_REG_CURRENT);
+	float result = Read16(ina219, INA219_REG_CURRENT);
 
 	return (result );
 }
 
 int16_t INA219_ReadCurrent(INA219_t *ina219)
 {
-	int16_t result = INA219_ReadCurrent_raw(ina219);
+	float result = INA219_ReadCurrent_raw(ina219);
 
 	return (result / ina219_currentDivider_mA );
 }

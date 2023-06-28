@@ -43,7 +43,7 @@ uint16_t ina219_calibrationValue;
 
 INA219_t ina219;
 
-uint16_t vbus, vshunt, current;
+float vbus, vshunt, current;
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -110,7 +110,6 @@ int main(void)
 		vbus = INA219_ReadBusVoltage(&ina219);
 		vshunt = INA219_ReadShuntVolage(&ina219);
 		current = INA219_ReadCurrent(&ina219);
-
 	}
 	/* USER CODE END 3 */
 }
